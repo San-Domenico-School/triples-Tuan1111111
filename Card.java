@@ -3,15 +3,15 @@ import greenfoot.*;
 /**
  * Game Board for Triples
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Tuan .L
+ * 1/9/2024
  */
 
 public class Card extends Actor
 {
     private Shape shape;
     private Color color;
-    private boolean isSelected;
+    private boolean isSelected = false;
     private GreenfootImage cardImage, selectedCardImage;
     private int numberOfShapes, shading;
     
