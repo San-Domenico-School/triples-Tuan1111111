@@ -14,6 +14,7 @@ public class Card extends Actor
     private boolean isSelected = false;
     private GreenfootImage cardImage, selectedCardImage;
     private int numberOfShapes, shading;
+    public boolean activateAnimation = false;
     
     public enum Shape
     {
@@ -34,6 +35,18 @@ public class Card extends Actor
         this.cardImage = cardImage;
         this.selectedCardImage = selectedCardImage;
         setImage(cardImage);
+    }
+    
+    public void act()
+    {
+        if(activateAnimation)
+        {
+            this.setLocation(this.getX(), this.getY()-5);
+        }
+        if(this.getY() < 0)
+        {
+            getWorld().removeObject(this);
+        }
     }
     
     public boolean getIsSelected()
@@ -75,5 +88,6 @@ public class Card extends Actor
     {
         this.isSelected = newSelect;
     }
+
 }
 

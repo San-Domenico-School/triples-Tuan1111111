@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Game Board for Triples
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Tuan .L
+ * 2/3/2024
  */
 public class GameBoard extends World
 {
@@ -20,6 +20,7 @@ public class GameBoard extends World
 
     public void prepareScene()
     {
+        Scorekeeper.setScore(0);
         Player player = new Player(dealer);
         addObject(dealer, -30, -30);
         addObject(player, -30, -30);

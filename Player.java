@@ -4,8 +4,8 @@ import java.util.ArrayList;
 /**
  * Write a description of class Player here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Tuan .L
+ * 2/2/2024
  */
 public class Player extends Actor
 {
@@ -43,6 +43,7 @@ public class Player extends Actor
         cardsOnBoard = (ArrayList) getWorld().getObjects(Card.class);
     }
     
+    //select the card if click on and deselect the card if click on again
     private void selectCards()
     {
         for(int i = 0; i < cardsOnBoard.size(); i++)
@@ -65,6 +66,7 @@ public class Player extends Actor
         }
     }
     
+    //reset the card selected
     private void resetCardsSelected()
     {
         for(int i = 0; i < cardsOnBoard.size(); i++)
@@ -76,6 +78,7 @@ public class Player extends Actor
         selectedCardsIndex.clear();
     }
     
+    //set the cards selected
     private boolean setCardsSelect()
     {
         if(selectedCardsIndex.size() == 3)

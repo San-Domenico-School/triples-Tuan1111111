@@ -15,14 +15,20 @@ public class Scorekeeper
         deckSize = newDeckSize;
     }
     
+    //add the score once got a triple
     public static void updateScore()
     {
         long duration = (System.currentTimeMillis() - startTime)/1000;
-        score += (float)1000*((float)1+ (float)9/Math.pow(100, ((float)duration/240)));
+        score += (float)100*((float)1+ (float)9/Math.pow(100, ((float)duration/240)));
     }
     
     public static int getScore()
     {
         return score;
+    }
+    
+    public static void setScore(int i)
+    {
+        score = i;
     }
 }

@@ -11,9 +11,9 @@ public class Animations
     {
         Greenfoot.playSound("wobble.wav");
     }
-    public static void slideAndTurn(Card[] i)
+    public static void slideAndTurn(Card i)
     {
         Greenfoot.playSound("swoosh.wav");
-        
+        i.activateAnimation = true;
     }
 }
